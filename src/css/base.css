@@ -1,0 +1,153 @@
+/* Base styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-4);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+}
+
+h6 {
+  font-size: var(--font-size-base);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--primary-color);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--primary-light);
+  color: var(--text-inverse);
+}
+
+::-moz-selection {
+  background-color: var(--primary-light);
+  color: var(--text-inverse);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color-dark);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Image responsiveness */
+img {
+  height: auto;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --background-primary: #ffffff;
+    --border-color: #000000;
+    --primary-color: #0000ff;
+  }
+}

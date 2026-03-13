@@ -1,0 +1,38 @@
+{
+  "name": "invite-agent-3",
+  "version": "1.0.0",
+  "description": "A modern web application for managing invitations",
+  "main": "src/js/main.js",
+  "scripts": {
+    "start": "npx serve -s . -l 3000",
+    "build": "npm run lint && npm run format:check",
+    "dev": "npx live-server --port=3000 --host=localhost",
+    "lint": "npx eslint src/js/**/*.js",
+    "lint:fix": "npx eslint src/js/**/*.js --fix",
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier --check .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "invitation",
+    "web-app",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "live-server": "^1.2.2",
+    "prettier": "^3.2.5",
+    "serve": "^14.2.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InviteAgent3 - A modern web application for managing invitations">
+    <meta name="keywords" content="invitation, event, management, web app">
+    <meta name="author" content="InviteAgent3 Team">
+    
+    <title>InviteAgent3</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/components.css">
+    <link rel="stylesheet" href="src/css/layout.css">
+    <link rel="stylesheet" href="src/css/utilities.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="src/css/base.css" as="style">
+    <link rel="preload" href="src/js/main.js" as="script">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__brand">
+                    <h1 class="nav__title">InviteAgent3</h1>
+                </div>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#features" class="nav__link">Features</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h2 class="hero__title">Welcome to InviteAgent3</h2>
+                    <p class="hero__description">
+                        A modern, efficient way to manage and send invitations for your events.
+                        Create beautiful invitations, track responses, and manage your guest lists with ease.
+                    </p>
+                    <div class="hero__actions">
+                        <button class="btn btn--primary" id="getStartedBtn">Get Started</button>
+                        <button class="btn btn--secondary" id="learnMoreBtn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section__title">Features</h2>
+                <div class="features__grid">
+                    <div class="feature-card">
+                        <div class="feature-card__icon">📧</div>
+                        <h3 class="feature-card__title">Easy Invitations</h3>
+                        <p class="feature-card__description">
+                            Create and send beautiful invitations in minutes with our intuitive interface.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">📊</div>
+                        <h3 class="feature-card__title">Response Tracking</h3>
+                        <p class="feature-card__description">
+                            Track RSVPs and manage guest responses in real-time.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🎨</div>
+                        <h3 class="feature-card__title">Custom Templates</h3>
+                        <p class="feature-card__description">
+                            Choose from beautiful templates or create your own unique design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section__title">About InviteAgent3</h2>
+                <p class="about__text">
+                    InviteAgent3 is built with modern web technologies to provide a seamless experience
+                    for event organizers. Our mission is to make invitation management simple, efficient, and enjoyable.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">InviteAgent3</h3>
+                    <p class="footer__text">Making invitation management effortless.</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#features" class="footer__link">Features</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2024 InviteAgent3. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="src/js/utils.js"></script>
+    <script src="src/js/components.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
