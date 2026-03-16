@@ -15,40 +15,38 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: var(--background-primary);
-            font-family: var(--font-family-primary);
+            background-color: white;
+            font-family: system-ui, -apple-system, sans-serif;
         }
 
         .counter {
             display: flex;
             align-items: center;
-            gap: var(--space-4);
+            gap: 16px;
         }
 
         .counter__button {
             width: 32px;
             height: 32px;
             border: none;
-            border-radius: var(--radius-sm);
-            background-color: #E6E6E6;
-            color: var(--text-primary);
-            font-size: var(--font-size-xl);
+            background-color: #F3F3F3;
+            color: #000;
+            font-size: 20px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background-color var(--transition-fast);
+            transition: background-color 0.2s;
         }
 
         .counter__button:hover {
-            background-color: #D6D6D6;
+            background-color: #E5E5E5;
         }
 
         .counter__value {
-            font-size: var(--font-size-3xl);
-            font-weight: var(--font-weight-medium);
-            color: var(--text-primary);
-            min-width: 60px;
+            font-size: 20px;
+            color: #000;
+            min-width: 20px;
             text-align: center;
         }
     </style>
