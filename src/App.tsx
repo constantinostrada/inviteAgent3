@@ -1,8 +1,8 @@
 import React from 'react';
-import CounterV3 from './components/CounterV3';
+import AddUserForm from './components/AddUserForm';
 
 const App: React.FC = () => {
-  return <CounterV3 />;
+  return <AddUserForm />;
 };
 
 export default App;
