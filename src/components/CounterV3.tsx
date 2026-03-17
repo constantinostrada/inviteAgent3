@@ -30,13 +30,24 @@ const ButtonContainer = styled.div`
   gap: 20px;
 `;
 
-const Button = styled.button<{ variant: 'increment' | 'decrement' }>`
+const Button = styled.button<{ variant: 'increment' | 'decrement' | 'multiply' }>`
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   font-size: 16px;
   color: white;
-  background-color: ${props => props.variant === 'increment' ? '#FFD600' : '#FF0000'};
+  background-color: ${props => {
+    switch (props.variant) {
+      case 'increment':
+        return '#FFD600';
+      case 'decrement':
+        return '#FF0000';
+      case 'multiply':
+        return '#00C853';
+      default:
+        return '#FF0000';
+    }
+  }};
   &:hover {
     opacity: 0.9;
   }
@@ -47,6 +58,7 @@ const CounterV3: React.FC = () => {
 
   const increment = () => setCount(prev => prev + 1);
   const decrement = () => setCount(prev => prev - 1);
+  const multiplyBy50 = () => setCount(prev => prev * 50);
 
   return (
     <Container>
@@ -58,6 +70,9 @@ const CounterV3: React.FC = () => {
         </Button>
         <Button variant="decrement" onClick={decrement}>
           Decrement
+        </Button>
+        <Button variant="multiply" onClick={multiplyBy50}>
+          Multiply by 50
         </Button>
       </ButtonContainer>
     </Container>
