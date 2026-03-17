@@ -46,6 +46,7 @@ const CounterV3: React.FC = () => {
   const [count, setCount] = useState(0);
 
   const increment = () => setCount(prev => prev + 1);
+  const incrementBy20 = () => setCount(prev => prev + 20);
   const decrement = () => setCount(prev => prev - 1);
 
   return (
@@ -55,6 +56,9 @@ const CounterV3: React.FC = () => {
       <ButtonContainer>
         <Button variant="increment" onClick={increment}>
           Increment
+        </Button>
+        <Button variant="increment" onClick={incrementBy20}>
+          +20
         </Button>
         <Button variant="decrement" onClick={decrement}>
           Decrement
